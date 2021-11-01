@@ -36,6 +36,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/login', 'Home::login');
 $routes->get('/logout', 'Home::logout');
 $routes->get('/register', 'Home::register');
+$routes->get('/dashboard', 'Home::dashboard');
 
 $routes->group('api', function ($routes) {
     $routes->group('v1', function ($routes) {

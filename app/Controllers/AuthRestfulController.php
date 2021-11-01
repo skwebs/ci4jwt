@@ -40,7 +40,7 @@ class AuthRestfulController extends ResourceController
         $user = $this->AuthModel->save($data);
         if ($user) {
             $response = [
-                "status" => 201,
+                "status" => "success",
                 "success" => 201,
                 "messages" => [
                     "success" => "User created"
@@ -67,11 +67,12 @@ class AuthRestfulController extends ResourceController
                 ];
                 $jwt = JWT::encode($token, $this->secretKeY, $this->algorithm);
                 $response = [
-                    "status" => 200,
+                    "status" => "success",
                     "success" => 200,
+                    "token" => $jwt,
+                    "data" => $token,
                     "messages" => [
                         "success" => "User logged in",
-                        "token" => $jwt
                     ]
                 ];
                 return $this->respond($response);

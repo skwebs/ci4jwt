@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   if (localStorage.token === undefined) {
     window.location.href = BASE_URL + "/login";
-  } else {
-    window.location.href = BASE_URL + "/dashboard";
   }
+  _("#welcome").innerHTML = "Welcome, " + localStorage.name;
 })
 

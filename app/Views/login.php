@@ -16,14 +16,15 @@
         <h1 class="text-center py-4">Login Form</h1>
         <form action="<?= site_url('api/v1/auth/login') ?>" method="post">
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="emailField" placeholder="Email">
+            <input type="email" class="form-control" id="emailField" placeholder="Email" required>
             <label for="email">Email address</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="passwordField" placeholder="Password">
+            <input type="password" class="form-control" id="passwordField" placeholder="Password" required>
             <label for="password">Password</label>
           </div>
           <button class="btn btn-primary " id="loginBtn">Login</button>
+          <a href="<?= site_url("/register") ?>" class="link d-inline-block ms-5">Register</a>
         </form>
       </div>
     </div>
@@ -32,7 +33,7 @@
   <script>
     const BASE_URL = '<?= base_url() ?>';
   </script>
-  <script src="<?= base_url("js/index.js") ?>"></script>
+  <script src="<?= base_url("js/login.js") ?>"></script>
 </body>
 
 </html>
